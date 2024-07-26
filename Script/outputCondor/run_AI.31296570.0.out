@@ -1,0 +1,13 @@
+cross val 
+Random Forest model selected
+R2  : 0.996 +/- (0.001)
+MAE : 0.021 +/- (0.002)
+MSE : 0.001 +/- (0.000)
+MAE on train : 0.021  +/- (0.000): 
+R2 on train : 0.996  +/- (0.000): 
+validation start
+MultiOutputRegressor(estimator=RandomForestRegressor(n_estimators=80))
+on validation r2 : 0.986 
+on validation mae: 0.046 
+on validation mse: 0.005 
+learningcurve evaluation

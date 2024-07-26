@@ -1,0 +1,18 @@
+universe = vanilla
+notification = Error
+notify_user = federica.cuna@ba.infn.it
+request_cpus = 1
+request_disk = 1024
+request_memory = 4096
+rank = Memory
+requirements = MaxHosts == 1
+initialdir = /lustrehome/federica1992/Nuses/Analysis/Script/
+getenv = true
+
+output =  /lustrehome/federica1992/Nuses/Analysis/Script/condor/outputCondor/run_analysis.$(Cluster).$(Process).out
+error =  /lustrehome/federica1992/Nuses/Analysis/Script/condor/outputCondor/run_analysis.$(Cluster).$(Process).err
+log =  /lustrehome/federica1992/Nuses/Analysis/Script/condor/outputCondor/run_analysis.$(Cluster).$(Process).log
+executable = run_analysis_CHANGEME.sh
+arguments =  ./CluTrack.py /lustrehome/federica1992/Nuses/Builds/JobsOutput/NUSES_wt_CaloHERDprotonMono_10000000-0.25_inclined_10/rootOutput/NUSES_wt_CaloHERDprotonMono_10000000-0.25_inclined_10_10000-evt-CHANGEME 0.25 /lustrehome/federica1992/Nuses/Analysis/ HERD 0 1 0
+
+queue

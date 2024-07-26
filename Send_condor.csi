@@ -1,0 +1,24 @@
+universe = vanilla
+notification = Error
+notify_user =mbossa@na.infn.it
+request_cpus = 1
+request_disk = 1024
+request_memory = 4096
+rank = Memory
+requirements = MaxHosts == 1
+initialdir = /lustrehome/mbossa/Nuses/Analysis
+getenv = true
+
+output = /lustrehome/mbossa/Nuses/Analysis/output_condor/run_analysis.$(Cluster).$(Process).out
+error = /lustrehome/mbossa/Nuses/Analysis/output_condor/run_analysis.$(Cluster).$(Process).err
+log = /lustrehome/mbossa/Nuses/Analysis/output_condor/run_analysis.$(Cluster).$(Process).log
+executable = run_analysis_simple.sh
+#protoni
+arguments = python calo_param.py ../Builds/JobsOutput/NUSES_wt_CaloHERDprotonMono_20000-0.25_onAxis_75/rootOutput/NUSES_wt_CaloHERDprotonMono_20000-0.25_onAxis_75_20000-evt-3 ../Builds/JobsOutput/NUSES_wt_CaloHERDprotonMono_20000-0.25_onAxis_75/rootOutput/NUSES_wt_CaloHERDprotonMono_20000-0.25_onAxis_75_20000-evt-3
+queue
+#elettroni
+#arguments = python calo_param.py ../Builds/JobsOutput/NUSES_wt_CaloHERDe-Mono_20000-0.25_onAxis_75/rootOutput/NUSES_wt_CaloHERDe-Mono_20000-0.25_onAxis_75_20000-evt-2 ../Builds/JobsOutput/NUSES_wt_CaloHERDe-Mono_20000-0.25_onAxis_75/rootOutput/NUSES_wt_CaloHERDe-Mono_20000-0.25_onAxis_75_20000-evt-2  
+#queue
+#pioni
+#arguments = python calo_param.py ../Builds/JobsOutput/NUSES_wt_CaloHERDpi+Mono_20000-0.25_onAxis_75/rootOutput/NUSES_wt_CaloHERDpi+Mono_20000-0.25_onAxis_75_20000-evt-4 ../Builds/JobsOutput/NUSES_wt_CaloHERDpi+Mono_20000-0.25_onAxis_75/rootOutput/NUSES_wt_CaloHERDpi+Mono_20000-0.25_onAxis_75_20000-evt-4
+#queue

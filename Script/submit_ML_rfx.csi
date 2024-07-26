@@ -1,0 +1,17 @@
+universe = vanilla
+notification = Error
+notify_user = federica.cuna@ba.infn.it
+request_cpus = 1
+request_disk = 1024
+request_memory = 4096
+rank = Memory
+requirements = MaxHosts == 1
+initialdir = /lustrehome/federica1992/Sim_Geant/Analysis/Script
+getenv = true
+
+output = ./outputCondor/run_AI.$(Cluster).$(Process).out
+error = ./outputCondor/run_AI.$(Cluster).$(Process).err
+log = ./outputCondor/run_AI.$(Cluster).$(Process).log
+executable = ./run_analysis_simple.sh
+arguments = ./CluTrack_AI.py /lustrehome/federica1992/Sim_Geant/Analysis/Results/CSVFile/ TrkData_viewx_NUSES_Rectangularmu+_1000MeV_0.25_onAxis_500000-evt_pitch0.25processed.csv RandomForest 2000
+queue
